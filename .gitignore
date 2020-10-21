@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+#lab1 files
+lab1/*.tar.gz
+lab1/256768*
+lab1/zad1
+lab1/zad2
+lab1/zad3
+lab1/zad4
+lab1/code*
+lab1/ex1*

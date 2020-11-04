@@ -6,13 +6,9 @@ int silnia(int number){
 		return 1;
 	return number * silnia(number - 1);
 }
-
-int potega(float podstawa, int wykladnik) {
-	int i;
-	float result = podstawa;
-	if (wykladnik == 0)
-		return 1;
-	for (i = 2; i < wykladnik; i++) {
+double potega(float podstawa, int wykladnik) {
+	long double result = 1;
+	for (wykladnik; wykladnik > 0; wykladnik--) {
 		result *= podstawa;
 	}
 	return result;
@@ -32,7 +28,7 @@ int main() {
 	float taylor_result = 0;
 	int k;
 	for (k = 0; k <= n; k++){
-		taylor_result += (pow(-1, k)/silnia(2*k + 1)) * pow(x, 2*k + 1);
+		taylor_result += (potega(-1, k)/silnia(2*k + 1)) * potega(x, 2*k + 1);
 	}
 	printf("Wzorem taylora = %f", taylor_result);
 	return 0;
